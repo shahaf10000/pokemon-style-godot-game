@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cguvh556lx84h"]
+
+[ext_resource type="PackedScene" uid="uid://crpqm1f52vhly" path="res://assets/tiles/dirt.glb" id="1_8plsb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8plsb"]
+size = Vector3(10, 1, 11.5)
+
+[node name="dirtTile" type="StaticBody3D"]
+
+[node name="dirt2" parent="." instance=ExtResource("1_8plsb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_8plsb")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr5bj4xs5xbo2"]
+
+[ext_resource type="PackedScene" uid="uid://cm22y5ucq3jqf" path="res://assets/tiles/sand.glb" id="1_njyph"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8plsb"]
+size = Vector3(10, 2, 11.5)
+
+[node name="sandTile" type="StaticBody3D"]
+
+[node name="sand2" parent="." instance=ExtResource("1_njyph")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_8plsb")

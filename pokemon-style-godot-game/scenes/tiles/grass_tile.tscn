@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://2a2rnhhoru50"]
+
+[ext_resource type="PackedScene" uid="uid://btxhrwf2wqyy6" path="res://assets/tiles/grass.glb" id="1_6u8su"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8plsb"]
+size = Vector3(10, 2, 11.5)
+
+[node name="grassTile" type="StaticBody3D"]
+
+[node name="grass2" parent="." instance=ExtResource("1_6u8su")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_8plsb")
