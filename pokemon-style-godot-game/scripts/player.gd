@@ -52,7 +52,7 @@ func _physics_process(_delta): # function to process physics every frame
 	move_and_slide() # actually moving the player
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouse:
+	if event is  InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			twist_input = - event.relative.x * mouse_sensitivity
 			pitch_input = - event.relative.y * mouse_sensitivity

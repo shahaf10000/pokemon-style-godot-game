@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gqmrb2rbf32j"]
+
+[ext_resource type="Script" uid="uid://c506qfam3jokf" path="res://scripts/DynamicTile.gd" id="1_wc12v"]
+
+[node name="DynamicTile" type="Node3D"]
+script = ExtResource("1_wc12v")
+tile_type = "Stone"

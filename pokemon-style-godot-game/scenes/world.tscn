@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctlljqw0agch3"]
+[gd_scene load_steps=6 format=3 uid="uid://ctm7qnldx5bvr"]
 
 [ext_resource type="PackedScene" uid="uid://b25n104yn4ep3" path="res://scenes/Player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://gqmrb2rbf32j" path="res://scenes/tiles/DynamicTile.tscn" id="3_4wyf3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nnsk1"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -15,11 +16,6 @@ sky = SubResource("Sky_rwgxs")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_e5uuo"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_nnsk1"]
-size = Vector3(20, 0.1, 20)
-
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -29,13 +25,32 @@ environment = SubResource("Environment_4wyf3")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, -0.000524521, 0, 0.0400536)
-mesh = SubResource("PlaneMesh_e5uuo")
-
-[node name="GroundCollision" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundCollision"]
-shape = SubResource("BoxShape3D_nnsk1")
-
 [node name="Player" parent="." instance=ExtResource("1_nnsk1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.6933, 7.30925, 0)
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="DynamicTile" parent="Ground" instance=ExtResource("3_4wyf3")]
+
+[node name="DynamicTile2" parent="Ground" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 8.5)
+tile_type = "Grass"
+
+[node name="DynamicTile3" parent="Ground" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -8.66)
+tile_type = "Sand"
+
+[node name="DynamicTile4" parent="Ground" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -8.5)
+tile_type = "Water"
+
+[node name="DynamicTile5" parent="Ground" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 8.5)
+
+[node name="DynamicTile6" parent="Ground" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+tile_type = "Water"
+
+[node name="DynamicTile7" parent="Ground" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+tile_type = "Grass"
