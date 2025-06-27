@@ -5,3 +5,4 @@
 [node name="DynamicTile" type="Node3D"]
 script = ExtResource("1_wc12v")
 tile_type = "Stone"
+refresh_model = false

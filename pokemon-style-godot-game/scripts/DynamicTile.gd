@@ -2,19 +2,16 @@
 extends Node3D
 
 @export_enum("Dirt", "Grass", "Sand", "Stone", "Water")
-var tile_type: String = "Grass"
-
-@export var refresh_model: bool:
+var tile_type: String = "Grass":
 	set(value):
-		if value:
-			load_model()
-			refresh_model = false  # Reset the toggle
+		tile_type = value
+		load_model()
 
 func _ready():
 	load_model()
 
 func load_model():
-	# Remove existing model
+	# Clear existing children
 	for child in get_children():
 		child.queue_free()
 
