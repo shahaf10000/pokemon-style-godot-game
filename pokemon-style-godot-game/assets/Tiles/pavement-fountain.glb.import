@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfavmdt164pb8"
-path="res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"
+uid="uid://cyntesi1c65d5"
+path="res://.godot/imported/pavement-fountain.glb-f1c70ac9e0db3eddf5d97e9b0efeac21.scn"
 
 [deps]
 
-source_file="res://Tiles/grass.glb"
-dest_files=["res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"]
+source_file="res://Tiles/pavement-fountain.glb"
+dest_files=["res://.godot/imported/pavement-fountain.glb-f1c70ac9e0db3eddf5d97e9b0efeac21.scn"]
 
 [params]
 

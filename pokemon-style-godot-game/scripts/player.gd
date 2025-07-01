@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var speed := 10.0
-@export var gravity := 20.0
+@export var gravity := 10
 
 var mouse_sensitivity := 0.001
 var twist_input := 0.0
@@ -16,21 +16,26 @@ func _ready() -> void:
 func _physics_process(_delta): # function to process physics every frame
 	var input_dir = Vector3.ZERO
 	
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("run"):
+		speed = 25
+	else:
+		speed = 10
+	
+	if Input.is_action_pressed("forward"):
 		input_dir.z -= 1
 	
-	if Input.is_action_pressed("ui_down")	:
+	if Input.is_action_pressed("backward")	:
 		input_dir.z += 1
 	
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("left"):
 		input_dir.x -= 1
 	
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("right"):
 		input_dir.x += 1
 	
 	input_dir = input_dir.normalized() # fixing the momvent speed if two button are pressed at the same time
 		
-	if Input.is_action_just_pressed("ui_end"):
+	if Input.is_action_just_pressed("stop"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	twist_pivot.rotate_y(twist_input)
@@ -46,8 +51,8 @@ func _physics_process(_delta): # function to process physics every frame
 	velocity.z = direction.z * speed
 	velocity.y -= gravity * _delta
 	
-	if Input.is_action_just_pressed("ui_jump") and is_on_floor():
-		velocity.y = gravity / 2
+	if Input.is_action_pressed("jump") and is_on_floor():
+		velocity.y = gravity / 5
 	
 	move_and_slide() # actually moving the player
 

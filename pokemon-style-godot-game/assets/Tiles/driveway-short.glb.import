@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfavmdt164pb8"
-path="res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"
+uid="uid://cwsalmfrpmb62"
+path="res://.godot/imported/driveway-short.glb-078ec51e1c1cc3759a065e1946c1e495.scn"
 
 [deps]
 
-source_file="res://Tiles/grass.glb"
-dest_files=["res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"]
+source_file="res://Tiles/driveway-short.glb"
+dest_files=["res://.godot/imported/driveway-short.glb-078ec51e1c1cc3759a065e1946c1e495.scn"]
 
 [params]
 

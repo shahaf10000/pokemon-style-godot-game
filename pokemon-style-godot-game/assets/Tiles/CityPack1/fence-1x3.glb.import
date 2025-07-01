@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfavmdt164pb8"
-path="res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"
+uid="uid://rvm6cbjdssar"
+path="res://.godot/imported/fence-1x3.glb-ed11087007eb512bc0e09e320ae1b242.scn"
 
 [deps]
 
-source_file="res://Tiles/grass.glb"
-dest_files=["res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"]
+source_file="res://assets/Tiles/CityPack1/fence-1x3.glb"
+dest_files=["res://.godot/imported/fence-1x3.glb-ed11087007eb512bc0e09e320ae1b242.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfavmdt164pb8"
-path="res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"
+uid="uid://bsb63jhpwsd36"
+path="res://.godot/imported/building-type-m.glb-23b1373c6caea0cfccc3714a5d5489c8.scn"
 
 [deps]
 
-source_file="res://Tiles/grass.glb"
-dest_files=["res://.godot/imported/grass.glb-2709972bebacbfaecfc3352d03b23400.scn"]
+source_file="res://Tiles/building-type-m.glb"
+dest_files=["res://.godot/imported/building-type-m.glb-23b1373c6caea0cfccc3714a5d5489c8.scn"]
 
 [params]
 
